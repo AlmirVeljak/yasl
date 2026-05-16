@@ -1,0 +1,19 @@
+let path = "data\notes.txt";
+let running = true;
+
+while (running) {
+    print "1) Add note";
+    print "2) Read notes";
+    print "3) Quit";
+    let choice = input("> ");
+
+    if (choice == "1") {
+        let note = input("Note: ");
+        appendFile(path, note + "\n");
+        print "Saved!";
+    } else if (choice == "2") {
+        print readFile(path);
+    } else {
+        running = false;
+    }
+}
