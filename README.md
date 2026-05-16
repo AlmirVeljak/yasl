@@ -129,9 +129,9 @@ See the [`data/`](./data) directory for:
 - `hello.yasl` — Hello, World!
 - `factorial.yasl` — Recursive factorial
 - `fibonacci.yasl` — Fibonacci sequence
-- `counter.yasl` — Closures demo
 - `greet.yasl` — Basic user input
 - `notes.yasl` — Simple note-taking app using file I/O
+- `classes.yasl` — Classes and inheritance
 
 ---
 
@@ -139,7 +139,7 @@ See the [`data/`](./data) directory for:
 
 ```
 src/
-└── com/craftinginterpreters/lox/
+└── com/interpreter/yasl/
     ├── Yasl.java          # Entry point
     ├── Scanner.java      # Lexer
     ├── Parser.java       # Parser
