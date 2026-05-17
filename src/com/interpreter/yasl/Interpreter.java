@@ -130,6 +130,28 @@ class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Void> {
             @Override
             public String toString() {return "<native function>";}
         });
+
+        globals.define("toString", new YaslCallable() {
+            @Override
+            public int arity() {
+                return 1;
+            }
+
+            @Override
+            public Object call(Interpreter interpreter, List<Object> arguments) {
+                Object arg = arguments.get(0);
+                if (arg == null) return "nil";
+                if (arg instanceof Double) {
+                    String text = arg.toString();
+                    if (text.endsWith(".0")) text = text.substring(0, text.length() - 2);
+                    return text;
+                }
+                return arg.toString();
+            }
+
+            @Override
+            public String toString() {return "<native function>";}
+        });
     }
 
     void interpret(List<Stmt> statements) {
