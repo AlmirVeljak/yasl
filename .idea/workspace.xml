@@ -1,32 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5b45413-8a13-4c4e-977f-1e189584099e" name="Changes" comment="" />
+    <list default="true" id="a5b45413-8a13-4c4e-977f-1e189584099e" name="Changes" comment="init commit">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/interpreter/tool/GenerateAst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/interpreter/tool/GenerateAst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/interpreter/yasl/AstPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/interpreter/yasl/AstPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/interpreter/yasl/Expr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/interpreter/yasl/Expr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/interpreter/yasl/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/interpreter/yasl/Interpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/interpreter/yasl/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/interpreter/yasl/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/interpreter/yasl/Resolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/interpreter/yasl/Resolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/interpreter/yasl/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/interpreter/yasl/Scanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/interpreter/yasl/TokenType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/interpreter/yasl/TokenType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/interpreter/yasl/Yasl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/interpreter/yasl/Yasl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AlmirVeljak&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AlmirVeljak/yasl.git&quot;,
+    &quot;accountId&quot;: &quot;e1ff1828-c6e8-4515-8d5c-10ceee96d932&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="3DmRtPfNpwt3cUuD9LJCGjVDosU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AstPrinter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GenerateAst.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Lox.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Yasl.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\al_be\IdeaProjects\LoxInterpreter\src\com\interpreter\yasl" />
+      <recent name="C:\Users\al_be\IdeaProjects\LoxInterpreter\src\com\craftinginterpreters\lox" />
+      <recent name="C:\Users\al_be\IdeaProjects\LoxInterpreter\src\com\craftinginterpreters" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Yasl">
+    <configuration name="GenerateAst" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.interpreter.tool.GenerateAst" />
+      <module name="YaslInterpreter" />
+      <option name="PROGRAM_PARAMETERS" value="data" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.interpreter.tool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Yasl" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.interpreter.yasl.Yasl" />
+      <module name="YaslInterpreter" />
+      <option name="PROGRAM_PARAMETERS" value="data\classes.yasl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.interpreter.yasl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.GenerateAst" />
+      <item itemvalue="Application.Yasl" />
+    </list>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\al_be\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a5b45413-8a13-4c4e-977f-1e189584099e" name="Changes" comment="" />
@@ -36,5 +127,20 @@
       <updated>1778885474944</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
   </component>
 </project>

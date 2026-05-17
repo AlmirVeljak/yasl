@@ -9,6 +9,9 @@ abstract class Expr {
     R visitCallExpr(Call expr);
     R visitGetExpr(Get expr);
     R visitGroupingExpr(Grouping expr);
+    R visitIndexExpr(Index expr);
+    R visitIndexSetExpr(IndexSet expr);
+    R visitLiteralListExpr(LiteralList expr);
     R visitLiteralExpr(Literal expr);
     R visitLogicalExpr(Logical expr);
     R visitSetExpr(Set expr);
@@ -88,6 +91,48 @@ abstract class Expr {
     }
 
     final Expr expression;
+  }
+ static class Index extends Expr {
+    Index(Expr object, Expr index) {
+      this.object = object;
+      this.index = index;
+    }
+
+    @Override
+    <R> R accept(Visitor<R> visitor) {
+      return visitor.visitIndexExpr(this);
+    }
+
+    final Expr object;
+    final Expr index;
+  }
+ static class IndexSet extends Expr {
+    IndexSet(Expr object, Expr index, Expr value) {
+      this.object = object;
+      this.index = index;
+      this.value = value;
+    }
+
+    @Override
+    <R> R accept(Visitor<R> visitor) {
+      return visitor.visitIndexSetExpr(this);
+    }
+
+    final Expr object;
+    final Expr index;
+    final Expr value;
+  }
+ static class LiteralList extends Expr {
+    LiteralList(List<Expr> elements) {
+      this.elements = elements;
+    }
+
+    @Override
+    <R> R accept(Visitor<R> visitor) {
+      return visitor.visitLiteralListExpr(this);
+    }
+
+    final List<Expr> elements;
   }
  static class Literal extends Expr {
     Literal(Object value) {

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LoxInterpreter.iml" filepath="$PROJECT_DIR$/LoxInterpreter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YaslInterpreter.iml" filepath="$PROJECT_DIR$/YaslInterpreter.iml" />
     </modules>
   </component>
 </project>

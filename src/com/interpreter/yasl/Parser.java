@@ -376,6 +376,16 @@ class Parser {
             } else if (match(DOT)) {
               Token name = consume(IDENTIFIER, "Expect property name after '.'.");
               expr = new Expr.Get(expr, name);
+            } else if (match(LEFT_BRACKET)) {
+                Expr index = expression();
+                consume(RIGHT_BRACKET,"Expect ']' after index.");
+
+                if (match(EQUAL)) {
+                    Expr value = expression();
+                    expr = new Expr.IndexSet(expr, index, value);
+                } else {
+                    expr = new Expr.Index(expr, index);
+                }
             } else {
                 break;
             }
@@ -426,6 +436,17 @@ class Parser {
             Expr expr  = expression();
             consume(RIGHT_PAREN, "Expect ')' after expression.");
             return new Expr.Grouping(expr);
+        }
+
+        if (match(LEFT_BRACKET)) {
+            List<Expr> elements = new ArrayList<>();
+            if (!check(RIGHT_BRACKET)) {
+                do {
+                    elements.add(expression());
+                } while (match(COMMA));
+            }
+            consume(RIGHT_BRACKET,"Expect ']' after list elements.");
+            return new Expr.LiteralList(elements);
         }
 
         throw error(peek(), "Expect expression.");

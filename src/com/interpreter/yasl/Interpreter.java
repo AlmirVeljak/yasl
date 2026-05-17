@@ -130,6 +130,28 @@ class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Void> {
             @Override
             public String toString() {return "<native function>";}
         });
+
+        globals.define("toString", new YaslCallable() {
+            @Override
+            public int arity() {
+                return 1;
+            }
+
+            @Override
+            public Object call(Interpreter interpreter, List<Object> arguments) {
+                Object arg = arguments.get(0);
+                if (arg == null) return "nil";
+                if (arg instanceof Double) {
+                    String text = arg.toString();
+                    if (text.endsWith(".0")) text = text.substring(0, text.length() - 2);
+                    return text;
+                }
+                return arg.toString();
+            }
+
+            @Override
+            public String toString() {return "<native function>";}
+        });
     }
 
     void interpret(List<Stmt> statements) {
@@ -227,12 +249,73 @@ class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Void> {
             return ((YaslInstance)object).get(expr.name);
         }
 
+        if (object instanceof YaslList) {
+            return ((YaslList)object).getMethod(expr.name);
+        }
+
         throw new RuntimeError(expr.name, "Only instances have properties.");
     }
 
     @Override
     public Object visitGroupingExpr(Expr.Grouping expr) {
         return evaluate(expr.expression);
+    }
+
+    @Override
+    public Object visitIndexExpr(Expr.Index expr) {
+        Object object = evaluate(expr.object);
+        Object index =  evaluate(expr.index);
+
+        if (!(object instanceof YaslList)) {
+            throw new RuntimeError(null, "Only lists can be indexed.");
+        }
+
+        if (!(index instanceof Double)) {
+            throw new RuntimeError(null, "Index must be a number.");
+        }
+
+        YaslList list = (YaslList) object;
+        int i = (int)(double)index;
+
+        if (i < 0 || i >= list.elements.size()) {
+            throw new RuntimeError(null, "Index out of bounds.");
+        }
+
+        return list.elements.get(i);
+    }
+
+    @Override
+    public Object visitIndexSetExpr(Expr.IndexSet expr) {
+        Object object = evaluate(expr.object);
+        Object index = evaluate(expr.index);
+
+        if (!(object instanceof YaslList)) {
+            throw new RuntimeError(null, "Only lists can be index.");
+        }
+
+        if (!(index instanceof Double)) {
+            throw new RuntimeError(null,"Index must be a number");
+        }
+
+        YaslList list = (YaslList) object;
+        int i = (int)(double) index;
+
+        if (i < 0 || i >= list.elements.size()) {
+            throw new RuntimeError(null, "Index out of bounds");
+        }
+
+        Object value = evaluate(expr.value);
+        list.elements.set(i ,value);
+        return value;
+    }
+
+    @Override
+    public Object visitLiteralListExpr(Expr.LiteralList expr) {
+        YaslList list = new YaslList();
+        for (Expr element : expr.elements) {
+            list.elements.add(evaluate(element));
+        }
+        return list;
     }
 
     @Override
