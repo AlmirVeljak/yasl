@@ -1,6 +1,6 @@
 # YASL — Yet Another Student Language
 
-YASL is a dynamically typed, tree-walk interpreted programming language built in Java as a learning project based on the book [*Crafting Interpreters*](https://craftinginterpreters.com/) by Robert Nystrom. It supports variables, functions, closures, classes, inheritance, and basic file I/O.
+YASL is a dynamically typed, tree-walk interpreted programming language built in Java as a learning project based on the book [*Crafting Interpreters*](https://craftinginterpreters.com/) by Robert Nystrom. It supports variables, functions, closures, arrays, classes, inheritance, and basic file I/O.
 
 ---
 
@@ -13,6 +13,7 @@ YASL is a dynamically typed, tree-walk interpreted programming language built in
 - **File I/O** — read, write, and append files with built-in native functions
 - **User input** — prompt the user from the terminal
 - **Arithmetic & logic** — standard operators, `and`/`or`, `!=`, `==`, etc.
+- **Arrays** — native array type with `[]` syntax, index access, and built-in method(s)
 
 ---
 
@@ -47,6 +48,17 @@ fun greet(name) {
 }
 
 greet("world");
+```
+
+### Arrays
+```
+let nums = [1, 2, 3];
+print nums[0];       // 1
+
+nums[1] = 99;
+print nums;          // [1.0, 99.0, 3.0]
+
+print nums.length();    // 3
 ```
 
 ### Closures
@@ -110,16 +122,17 @@ print contents;
 
 ## Built-in Functions
 
-| Function | Arguments | Description |
-|---|---|---|
-| `print` | any | Print a value to stdout |
-| `clock()` | none | Current time in seconds since epoch |
-| `input(prompt)` | string | Read a line of user input |
-| `toNumber(str)` | string | Convert a string to a number |
-| `toString(n)` | number | Convert a number to a string |
-| `readFile(path)` | string | Read a file and return its contents as a string |
-| `writeFile(path, content)` | string, string | Write a string to a file (overwrites) |
+| Function                    | Arguments | Description |
+|-----------------------------|---|---|
+| `print`                     | any | Print a value to stdout |
+| `clock()`                   | none | Current time in seconds since epoch |
+| `input(prompt)`             | string | Read a line of user input |
+| `toNumber(str)`             | string | Convert a string to a number |
+| `toString(n)`               | number | Convert a number to a string |
+| `readFile(path)`            | string | Read a file and return its contents as a string |
+| `writeFile(path, content)`  | string, string | Write a string to a file (overwrites) |
 | `appendFile(path, content)` | string, string | Append a string to a file |
+| `list.length()`             | none | Return the length of the list |
 
 ---
 
