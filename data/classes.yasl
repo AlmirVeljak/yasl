@@ -1,0 +1,76 @@
+class Shape {
+    init(color) {
+        this.color = color;
+    }
+
+    describe() {
+        print "I am a " + this.color + " " + this.name() + ".";
+    }
+
+    // Meant to be overridden
+    name() {
+        return "shape";
+    }
+
+    area() {
+        return 0;
+    }
+}
+
+class Circle < Shape {
+    init(color, radius) {
+        super.init(color);
+        this.radius = radius;
+    }
+
+    name() {
+        return "circle";
+    }
+
+    area() {
+        return 3.14159 * this.radius * this.radius;
+    }
+}
+
+class Rectangle < Shape {
+    init(color, width, height) {
+        super.init(color);
+        this.width = width;
+        this.height = height;
+    }
+
+    name() {
+        return "rectangle";
+    }
+
+    area() {
+        return this.width * this.height;
+    }
+}
+
+class Square < Rectangle {
+    init(color, size) {
+        super.init(color, size, size);
+    }
+
+    name() {
+        return "square";
+    }
+}
+
+let c = Circle("red", 5);
+let r = Rectangle("blue", 4, 6);
+let s = Square("green", 3);
+
+c.describe();
+print "Area: " + toString(c.area());
+
+print "";
+
+r.describe();
+print "Area: " + toString(r.area());
+
+print "";
+
+s.describe();
+print "Area: " + toString(s.area());
