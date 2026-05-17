@@ -116,6 +116,7 @@ print contents;
 | `clock()` | none | Current time in seconds since epoch |
 | `input(prompt)` | string | Read a line of user input |
 | `toNumber(str)` | string | Convert a string to a number |
+| `toString(n)` | number | Convert a number to a string |
 | `readFile(path)` | string | Read a file and return its contents as a string |
 | `writeFile(path, content)` | string, string | Write a string to a file (overwrites) |
 | `appendFile(path, content)` | string, string | Append a string to a file |
