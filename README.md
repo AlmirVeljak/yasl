@@ -155,16 +155,17 @@ See the [`data/`](./data) directory for:
 src/
 └── com/interpreter/yasl/
     ├── Yasl.java          # Entry point
-    ├── Scanner.java      # Lexer
-    ├── Parser.java       # Parser
-    ├── Resolver.java     # Variable resolution
-    ├── Interpreter.java  # Tree-walk interpreter
-    ├── Expr.java         # Expression AST nodes
-    ├── Stmt.java         # Statement AST nodes
-    ├── Environment.java  # Variable scoping
+    ├── Scanner.java       # Lexer
+    ├── Parser.java        # Parser
+    ├── Resolver.java      # Variable resolution
+    ├── Interpreter.java   # Tree-walk interpreter
+    ├── Expr.java          # Expression AST nodes
+    ├── Stmt.java          # Statement AST nodes
+    ├── Environment.java   # Variable scoping
     ├── YaslCallable.java  # Callable interface
     ├── YaslFunction.java  # User-defined functions
     ├── YaslClass.java     # Class runtime representation
+    ├── YaslList.java      # Native list type
     └── YaslInstance.java  # Instance runtime representation
 ```
 
