@@ -102,7 +102,7 @@ if (age >= 18) {
 ```
 writeFile("notes.txt", "Hello from YASL!\n");
 appendFile("notes.txt", "A second line.\n");
-var contents = readFile("notes.txt");
+let contents = readFile("notes.txt");
 print contents;
 ```
 
