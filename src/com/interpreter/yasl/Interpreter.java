@@ -215,6 +215,9 @@ class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Void> {
             case STAR:
                 checkNumberOperands(expr.operator, left, right);
                 return (double)left * (double)right;
+            case PERCENT:
+                checkNumberOperands(expr.operator, left, right);
+                return (double)left % (double)right;
         }
 
         // Unreachable.
